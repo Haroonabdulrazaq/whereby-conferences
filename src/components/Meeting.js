@@ -7,7 +7,7 @@ function Meeting() {
 
   const API_KEY = process.env.REACT_APP_API_KEY;
   const createMeeting = async()=>{
-    // console.log('Hello world');
+
     const response = await axios({
       method: 'GET',
       url: `${process.env.REACT_APP_BACKEND_URL}/`,
