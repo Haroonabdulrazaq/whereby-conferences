@@ -1,26 +1,32 @@
 import React from 'react';
 import axios from 'axios';
 
-import './meeting.css';
+import './meeting.scss';
 
 function Meeting() {
 
   // const API_KEY = process.env.REACT_APP_API_KEY;
   const createMeeting = async()=>{
-    const response = await axios({
+    await axios({
       method: 'GET',
-      headers: { Accept: 'application/json' },
-      url: `${process.env.REACT_APP_BACKEND_URL}/`,
+      config: {
+        headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      }},
+      url: `${process.env.REACT_APP_BACKEND_URL}/create-meeting`,
       params: {
         isLocked: true,
       },
-    });
-    const result = await response;
-    console.log('I am the result of the API call', result.data);
+    }).then((response)=>{
+      console.log('Here is the response', response);
+    })
+    // const result = await response;
+    // console.log('I am the result of the API call', result.data);
   }
 
   return (
-    <div>
+    <div className='meeting-wrapper'>
       <div className='create-meeting-btn' onClick={createMeeting}>Create Meeting</div>
     </div>
   )
