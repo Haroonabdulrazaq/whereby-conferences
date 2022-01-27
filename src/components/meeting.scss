@@ -1,10 +1,35 @@
+@import '../assets/stylesheets/utils.scss';
+@import '../assets/stylesheets/mediaQuery.scss';
+
 .meeting-wrapper {
-  min-height: 100vh;
+  height: 100vh;
   border: 1px solid chartreuse;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .meeting-sidebar {
+    width: 40%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, $light-blue, $blue 0%, $dark-blue 80%);
+  }
+  .meeting-content {
+    width: 60%;
+    
+    .create-meeting-btn {
+      background: linear-gradient(to bottom right, $light-blue, $blue 0%, $dark-blue 80%);
+      color: white;
+      padding: 1rem 2rem;
+    }
+  }
 }
 
 .create-meeting-btn {
   width: 50px;
   height: 25px;
+  background: chartreuse;
+  padding: 2rem;
   border: 1px solid chartreuse;
 }
+

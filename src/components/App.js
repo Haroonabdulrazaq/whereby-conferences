@@ -1,7 +1,7 @@
-import Interceptors from './Interceptors';
-import Meeting from './components/Meeting';
+import Interceptors from '../Interceptors';
+import Meeting from './Meeting';
 import React from 'react';
-import './App.css';
+import './App.scss';
 
 function App() {
   React.useEffect(() => {

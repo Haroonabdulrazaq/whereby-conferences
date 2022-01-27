@@ -27,7 +27,10 @@ function Meeting() {
 
   return (
     <div className='meeting-wrapper'>
-      <div className='create-meeting-btn' onClick={createMeeting}>Create Meeting</div>
+      <div className='meeting-sidebar'></div>
+      <div className='meeting-content'>
+        <button className='create-meeting-btn' onClick={createMeeting}>Create Meeting</button>
+      </div>
     </div>
   )
 }
