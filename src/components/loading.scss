@@ -1,0 +1,27 @@
+@import '../assets/stylesheets/mediaQuery.scss';
+@import '../assets/stylesheets/utils.scss';
+
+.loader {
+  border: 2px solid #e3e3e3;
+  border-radius: 50%;
+  border-top: 6px solid $dark-blue;
+  // border-bottom: 6px solid $dark-blue;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+  @include responsive(large-screen) {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

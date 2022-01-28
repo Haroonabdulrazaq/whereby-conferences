@@ -14,8 +14,9 @@
   }
 
   .meeting-sidebar {
-    min-height: 30vh;
+    min-height: 10vh;
     width: 100%;
+
     background: linear-gradient(to bottom right, $light-blue, $blue 0%, $dark-blue 80%);
     
     display: flex;
@@ -28,9 +29,18 @@
       min-height: 100vh;
     }
     .header-name {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: bolder;
-      text-align: center;
+      text-align: left;
+      h2 {
+        text-align: left;
+        @include responsive(tab){
+          text-align: center;
+        }
+      }
+      @include responsive(tab){
+        text-align: left;
+      }
     }
   }
   .meeting-content {
@@ -64,5 +74,13 @@
       // transform: scale(1.1);
       box-shadow: $shadow;
     }
+  }
+}
+
+.tab-display {
+  display: none;
+
+  @include responsive(tab) {
+    display: block;
   }
 }

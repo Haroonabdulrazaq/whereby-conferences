@@ -1,4 +1,43 @@
+@import '../assets/stylesheets/utils.scss';
+@import '../assets/stylesheets/mediaQuery.scss';
+
 .data-wrapper {
-  border: 1px solid chartreuse;
+  color: #fff;
+  background: linear-gradient(to bottom right, $light-blue, $blue 0%, $dark-blue 80%);
+  // background: rgba($color:#000, $alpha: 1);
   min-height: 50%;
+  height: auto;
+  width: 80%;
+  border-radius: 0.3rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .meeting-data {
+    width: 80%;
+    // margin: 0 auto;
+    padding: 0.7rem 2rem;
+    border: 1px solid $ash;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    align-self: flex-start;
+    opacity: 0.2;
+    margin-bottom: 1rem;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+  .meeting-data:hover {
+    opacity: 1;
+  }
+
+  @include responsive(tab) {
+    width: 70%;
+  }
+
 }
